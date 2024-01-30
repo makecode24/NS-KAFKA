@@ -1,0 +1,24 @@
+#prod_streaming_config.yaml
+#File contains the configurations of kafka
+
+name: "streaming job"
+
+oath_config:
+  token_endpoint_uri : "<oath endpoint>"
+  okta_content_Type: "application/x-www-form-urlencoded"
+  kafka_content_type: "application/json"
+
+http_endpoint_url: "<kafka endpoint>"
+
+kafka_broker_host: "<kafka broker host>"
+kafka_starting_offsets: "0"
+
+check_point_location: "hdfs:///path_to_checkpoint_dir_raw_layer"
+
+target_raw_data_path: "hdfs:///path_to_dir_raw_layer"
+
+target_processed_data_path: "hdfs:///path_to_dir_processed_layer"
+
+target_error_data_path: "hdfs:///path_to_dir_error_layer"
+
+trigger_interval : "300 seconds"
